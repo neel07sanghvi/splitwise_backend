@@ -38,7 +38,7 @@ public class Expense {
     private Group group;
 
     @ElementCollection
-    @CollectionTable(name = "expense_splits", joinColumns = @JoinColumn(name = "expensie_id"))
+    @CollectionTable(name = "expense_splits", joinColumns = @JoinColumn(name = "expense_id"))
     @MapKeyJoinColumn(name = "user_id")
     @Column(name = "amount")
     private Map<User, BigDecimal> splits;
